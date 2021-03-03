@@ -28,6 +28,9 @@ main {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 44px;
 }
+#login-heading{
+   display: none;
+}
 .login__window-left {
     width: 40%;
     height: 100%;
@@ -50,6 +53,7 @@ main {
     max-height: 200px;
     position: relative;
     bottom: 0;
+    border-bottom-left-radius: 15px;
 }
 .login__window-right{
     width: 60%;
@@ -60,7 +64,7 @@ main {
     text-align: center;
     position: relative;
 }
-.login__window-content-wrapper{
+.login__window-form{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -76,8 +80,11 @@ main {
     border-radius: 15px;
     height: 30px;
 }
-.login__window-input:hover{
-    animation: WrongInput 0.8s  ease-in-out infinite ;
+.login__window-input:invalid{
+    animation: WrongInput 0.3s  ease-in-out 3 ;
+}
+.login__window-input:valid{
+    background-color: greenyellow;
 }
 .login__window-label{
     font-size: larger;
@@ -85,7 +92,7 @@ main {
 }
 .login__window-button-wrapper{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .submit-button{
     width: 90px;
@@ -101,9 +108,20 @@ main {
     animation: ChangeColour 0.5s ease-in forwards;
     cursor: pointer;
 }
-@media only screen and (max-width: 720px) {
+.password-checkbox {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+@media only screen and (max-width: 820px) {
     .login__window-left {
         display: none;
+    }
+    .login__window-right{
+        width: 100%;
+        border-radius: 15px;
+    }
+    .login__window{
+        max-width: 400px;
     }
     
 }
@@ -118,7 +136,8 @@ main {
         background-color: red;
     }
     50% {
-        transform: translateX(0);  
+        transform: translateX(0); 
+        background-color: red;  
     }
     75% {
         transform: translateX(5px);
@@ -126,6 +145,7 @@ main {
     }
     to{
         transform: translateX(0);
+        background-color: red; 
     }
 }
 @keyframes ChangeColour {
