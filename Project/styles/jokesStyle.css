@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  background-image: url("http://getwallpapers.com/wallpaper/full/6/d/0/890648-new-funny-computer-wallpaper-backgrounds-1920x1080.jpg");
+}
+nav {
+  display: flex;
+  height: 60px;
+  background-color: gray;
+  opacity: 0.8;
+  justify-content: center;
+}
+nav p {
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: cursive;
+  margin: 0 90px;
+  min-width: 250px;
+}
+.log-out-button {
+  position: relative;
+  left: 5px;
+  top: -50px;
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(192, 0, 16);
+  font-family: cursive;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px;
+  cursor: pointer;
+}
+.log-out-button:focus,
+.get-joke-button:focus,
+.save-joke-button:focus,
+.skip-joke-button:focus,
+.get-joke-button:focus,
+.delete-joke-button:focus,
+.joke-rating-button:focus {
+  outline: none;
+}
+.log-out-button:active,
+.get-joke-button:active,
+.save-joke-button:active,
+.skip-joke-button:active,
+.delete-joke-button:active,
+.joke-rating-button:active {
+  transform: translateY(3px);
+}
+.get-joke-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30px;
+}
+.get-joke-button {
+  height: 150px;
+  width: 250px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 3px 3px 5px;
+  background-color: seagreen;
+  font-size: 35px;
+  font-family: cursive;
+  margin-top: 130px;
+  cursor: pointer;
+}
+.display-joke-container {
+  width: 650px;
+  min-height: 200px;
+  background-color: skyblue;
+  margin-top: 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.display-joke-container p {
+    margin: 20px 15px 15px 15px;
+    padding: 0;
+    font-family: cursive;
+    font-size: 18px;
+}
+.display-joke-container-buttons-wrapper {
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto 10px auto;
+}
+.display-joke-content-wrapper{
+    border: rgb(129, 38, 247) solid; 
+    height: 140px;
+    margin: 15px;
+    background-color: whitesmoke;
+}
+.rate-joke-wrapper{
+  color: white;
+  height: 100px;
+  width: 335px;
+  background-color: #2f2f2f;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  display: none;
+}
+.rate-joke-wrapper h3{
+  padding: 5px;
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+}
+.rate-joke-buttons-wrapper{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 10px;
+}
+.joke-rating-button{
+  border: none;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+.joke-rating-button:hover{
+  background-color: wheat;
+}
+.rate-joke-wrapper::before{
+  content:" ";
+  width:0px;
+  background:transparent;
+  height:0px;
+  position:absolute;
+  top:-20px; 
+  left: 50%;
+  transform: translate(-50%);
+  border-right: 10px solid transparent;
+  border-top: 10px solid  transparent;
+  border-left: 10px solid transparent; 
+  border-bottom: 10px solid #333;; 
+}
+.save-joke-button,
+.skip-joke-button{
+    height: 40px;
+  width: 90px;
+  border-radius: 10px;
+  border: none;
+  font-family: cursive;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px;
+  cursor: pointer;
+}
+.delete-joke-button{
+  height: 35px;
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  font-family: cursive;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px;
+  cursor: pointer;
+  position: relative;
+  right: -10px;
+}
+.save-joke-button{
+    background-color: cornflowerblue;
+}
+.skip-joke-button,
+.delete-joke-button {
+    background-color: crimson;
+}
+.saved-jokes-section{
+    margin: 15px 30px 0 30px;
+    border: solid;
+    padding: 5px;
+    max-width: 800px;
+}
+.saved-joke {
+    display: flex;
+    justify-content: space-between;
+  border: solid 2px burlywood;
+  padding: 5px;
+}
+.saved-joke p {
+  max-width: 580px;
+}
+.saved-joke-button-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.saved-joke-rating-wrapper{
+  display: flex;
+  margin: 10px;
+  }
+  .saved-joke-rating-wrapper p{
+   margin: 0;
+  }
+@media only screen and (min-width: 820px) {
+    .saved-jokes-section {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (max-width: 650px) {
+    nav {
+        height: 120px;
+    }
+    .log-out-button {
+        top: 5px;
+    }
+}

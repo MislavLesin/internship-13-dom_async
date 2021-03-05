@@ -43,9 +43,14 @@ function TogglePasswordVisibility() {
 function SetToLogin() {
   document.getElementById("login-heading").style.display = "block";
   document.getElementById("register-heading").style.display = "none";
-  document.getElementById("password2-input").style.display = "none";
-  document.getElementById("password2-input").removeAttribute("required");
+  document.getElementById("repeat-password-input").style.display = "none";
   document.querySelector(".submit-button").setAttribute("onclick","validateLogin();");
+  document.querySelectorAll(".login__window-input").forEach((elemnt) => {
+    elemnt.removeAttribute("required");
+    elemnt.removeAttribute("minlength");
+    elemnt.removeAttribute("maxlength");
+  })
+  
 }
 
 function validateLogin() {
