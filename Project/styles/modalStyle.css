@@ -1,0 +1,65 @@
+.modal-background{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    background-color: gray;
+    opacity: 0.6;
+    display: none;
+}
+.my-modal{
+    position: absolute;
+    height: 200px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%,-50%);
+    background-color: gray;
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgb(0, 0, 0,.30);
+    opacity: 1;
+    display: none;
+}
+.my-modal p{
+    font-family: cursive;
+    font-size: 28px;
+    padding: 15px;
+    border: solid 2px;
+    border-radius: 15px;
+    margin-top: 0;
+}
+.my-modal-buttons-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.my-modal-delete-button,
+.my-modal-cancel-button{
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 3px 3px 5px;
+    font-size: 35px;
+    font-family: cursive;
+    margin-top: 130px;
+    cursor: pointer;
+    position: relative;
+    bottom: 135px;
+}
+.my-modal-cancel-button:focus,
+.my-modal-delete-button:focus {
+    outline: none;
+  }
+.my-modal-delete-button:active,
+.my-modal-cancel-button:active{
+    transform: translateY(3px);
+}
+.my-modal-delete-button{
+    background-color: rgb(180, 1, 1);
+}¸
+.my-modal-cancel-button{
+    background-color: rgb(99, 99, 99);
+}

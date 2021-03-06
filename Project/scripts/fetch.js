@@ -1,5 +1,5 @@
 const apiUrl = "https://icanhazdadjoke.com/";
-
+var currentJoke = undefined;
 
 function getJoke() {
     document.querySelector(".rate-joke-wrapper").style.display = "none";
@@ -11,7 +11,9 @@ function getJoke() {
         },
       })
         .then((results) => results.json())
-        .then((data) => jokeOutput.innerHTML = data?.joke)
+        .then((data) =>{
+        currentJoke = data;
+        jokeOutput.innerHTML = currentJoke?.joke;
+        })
         .catch((error) => console.log(error));
-
 }

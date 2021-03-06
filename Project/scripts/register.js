@@ -60,7 +60,7 @@ function validateLogin() {
     username.localeCompare(localStorage.getItem("username")) == 0 &&
     password.localeCompare(localStorage.getItem("password")) == 0
   ) {
-    alert("Sucessfull Login!");
+    window.location.href = "./jokes.html"
   }
   else alert("Login Failed!");
 }
