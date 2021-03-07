@@ -1,13 +1,24 @@
 body {
   margin: 0;
-  background-image: url("http://getwallpapers.com/wallpaper/full/6/d/0/890648-new-funny-computer-wallpaper-backgrounds-1920x1080.jpg");
+}
+.background-image {
+  position: fixed;
+  top: 60px;
+  z-index: -1;
+  width: 110%;
+  overflow: hidden;
+  min-width: 1270px;
 }
 nav {
+  position: fixed;
+  top: 0;
   display: flex;
   height: 60px;
+  width: 100%;
   background-color: gray;
-  opacity: 0.8;
   justify-content: center;
+  z-index: 1;
+  min-width: 420px;
 }
 nav p {
   font-size: 42px;
@@ -18,9 +29,10 @@ nav p {
   min-width: 250px;
 }
 .log-out-button {
-  position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 10px;
   left: 5px;
-  top: -50px;
   height: 40px;
   width: 80px;
   border-radius: 10px;
@@ -54,6 +66,7 @@ nav p {
   flex-direction: column;
   align-items: center;
   margin: 0 30px;
+  margin-top: 150px;
   position: relative;
 }
 .get-joke-button {
@@ -80,10 +93,10 @@ nav p {
   display: none;
 }
 .display-joke-container p {
-    margin: 20px 15px 15px 15px;
-    padding: 0;
-    font-family: cursive;
-    font-size: 18px;
+  margin: 20px 15px 15px 15px;
+  padding: 0;
+  font-family: cursive;
+  font-size: 18px;
 }
 .display-joke-container-buttons-wrapper {
   top: 10px;
@@ -92,13 +105,13 @@ nav p {
   width: 95%;
   margin: 0 auto 10px auto;
 }
-.display-joke-content-wrapper{
-    border: rgb(129, 38, 247) solid; 
-    height: 140px;
-    margin: 15px;
-    background-color: whitesmoke;
+.display-joke-content-wrapper {
+  border: rgb(129, 38, 247) solid;
+  height: 140px;
+  margin: 15px;
+  background-color: whitesmoke;
 }
-.rate-joke-wrapper{
+.rate-joke-wrapper {
   color: white;
   height: 115px;
   width: 335px;
@@ -109,44 +122,44 @@ nav p {
   bottom: -135px;
   display: none;
 }
-.rate-joke-wrapper h3{
+.rate-joke-wrapper h3 {
   padding: 5px;
   font-size: 20px;
   font-family: cursive;
   text-align: center;
 }
-.rate-joke-buttons-wrapper{
+.rate-joke-buttons-wrapper {
   display: flex;
   justify-content: space-evenly;
   margin: 0 10px;
 }
-.joke-rating-button{
+.joke-rating-button {
   border: none;
   border-radius: 50%;
   height: 25px;
   width: 25px;
   text-align: center;
 }
-.joke-rating-button:hover{
+.joke-rating-button:hover {
   background-color: wheat;
 }
-.rate-joke-wrapper::before{
-  content:" ";
-  width:0px;
-  background:transparent;
-  height:0px;
-  position:absolute;
-  top:-20px; 
+.rate-joke-wrapper::before {
+  content: " ";
+  width: 0px;
+  background: transparent;
+  height: 0px;
+  position: absolute;
+  top: -20px;
   left: 50%;
   transform: translate(-50%);
   border-right: 10px solid transparent;
-  border-top: 10px solid  transparent;
-  border-left: 10px solid transparent; 
-  border-bottom: 10px solid #333;; 
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #333;
 }
 .save-joke-button,
-.skip-joke-button{
-    height: 40px;
+.skip-joke-button {
+  height: 40px;
   width: 90px;
   border-radius: 10px;
   border: none;
@@ -155,7 +168,7 @@ nav p {
   box-shadow: 3px 3px 5px;
   cursor: pointer;
 }
-.delete-joke-button{
+.delete-joke-button {
   height: 35px;
   width: 70px;
   border-radius: 10px;
@@ -167,50 +180,58 @@ nav p {
   position: relative;
   right: -10px;
 }
-.save-joke-button{
-    background-color: cornflowerblue;
+.save-joke-button {
+  background-color: cornflowerblue;
 }
 .skip-joke-button,
 .delete-joke-button {
-    background-color: crimson;
+  background-color: crimson;
 }
-.saved-jokes-section{
-    margin: 150px 30px 0 30px;
-    padding: 5px;
-    max-width: 800px;
+.saved-jokes-section {
+  margin: 150px 30px 0 30px;
+  padding: 5px;
+  max-width: 800px;
 }
 .saved-joke {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   border: solid 2px burlywood;
   padding: 5px;
   margin: 10px;
+  background-color: bisque;
+  font-family: cursive;
 }
 .saved-joke p {
   max-width: 580px;
 }
-.saved-joke-button-wrapper{
+.saved-joke-button-wrapper {
   display: flex;
   flex-direction: column;
 }
-.saved-joke-rating-wrapper{
+.saved-joke-rating-wrapper {
   display: flex;
   margin: 10px;
+}
+.saved-joke-rating-wrapper p {
+  margin: 0;
+}
+@media only screen and (max-width: 1270px){
+  .background-image{
+    right: 0;
   }
-  .saved-joke-rating-wrapper p{
-   margin: 0;
-  }
+}
 @media only screen and (min-width: 820px) {
-    .saved-jokes-section {
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .saved-jokes-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media only screen and (max-width: 650px) {
-    nav {
-        height: 120px;
-    }
-    .log-out-button {
-        top: 5px;
-    }
+  nav {
+    height: 120px;
+    text-align: center;
+  }
+  .log-out-button {
+    top: 5px;
+  }
 }
