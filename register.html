@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Domaci 13</title>
+    <link rel="stylesheet" href="../styles/registerStyle.css" />
+  </head>
+  <body>
+    <img src="../assets/images/loginBackground.jfif" class="backgorund-image" />
+    <main>
+      <div class="login__window">
+        <div class="login__window-left">
+          <h3 class="left-window-heading">Brought to you by</h3>
+          <img src="../assets/images/download.png" class="dump-image" />
+        </div>
+        <div class="login__window-right">
+          <h1 class="login__window-heading" id="register-heading">Register</h1>
+          <h1 class="login__window-heading" id="login-heading">Log in</h1>
+          <form class="login__window-form" action="javascript:void(0)">
+            <div class="login__window-label-wrapper">
+              <label for="username-input" class="login__window-label"
+                >Username:
+              </label>
+              <input
+                placeholder="UserName"
+                name="userName"
+                id="username-input"
+                class="login__window-input"
+                type="text"
+                required
+                minlength="5"
+                maxlength="10"
+              />
+            </div>
+            <div class="login__window-label-wrapper">
+              <label for="password1-input" class="login__window-label"
+                >Password:
+              </label>
+              <input
+                placeholder="Password"
+                name="password1"
+                id="password1-input"
+                class="login__window-input"
+                type="password"
+                required
+                minlength="5"
+                maxlength="10"
+              />
+            </div>
+            <div class="login__window-label-wrapper" id="repeat-password-input">
+              <label for="password2-input" class="login__window-label"
+                >Repeat Password:
+              </label>
+              <input
+                placeholder="Repeat Password"
+                name="password2"
+                id="password2-input"
+                class="login__window-input"
+                type="password"
+                required
+                minlength="5"
+                maxlength="10"
+              />
+            </div>
+            <div class="login__window-button-wrapper">
+              <div class="password-checkbox">
+                <label for="password-checkbox">Show passwords</label>
+                <input
+                  type="checkbox"
+                  name="password-checkbox"
+                  id="password-checkbox"
+                  onclick="TogglePasswordVisibility()"
+                />
+              </div>
+              <button type="submit" class="submit-button" onclick="Validete()">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="../scripts/register.js"></script>
+    <script CheckLocalStorage()></script>
+  </body>
+</html>

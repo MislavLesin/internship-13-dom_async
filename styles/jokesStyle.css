@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+}
+.background-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  min-width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+}
+nav {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.nav-login-div {
+  grid-template-columns: 1/2;
+  margin: 15px;
+}
+.nav-paragraph-div {
+  grid-template-columns: 2/3;
+}
+.nav-paragraph-div p {
+  text-align: center;
+  font-size: 32px;
+  margin: 15px 0;
+}
+.log-out-button {
+  z-index: 1;
+  top: 10px;
+  left: 5px;
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(0, 192, 32);
+  font-family: cursive;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px;
+  cursor: pointer;
+}
+.username-label {
+  margin-left: 20px;
+}
+
+.log-out-button:focus,
+.get-joke-button:focus,
+.save-joke-button:focus,
+.skip-joke-button:focus,
+.get-joke-button:focus,
+.delete-joke-button:focus,
+.joke-rating-button:focus {
+  outline: none;
+}
+.log-out-button:active,
+.get-joke-button:active,
+.save-joke-button:active,
+.skip-joke-button:active,
+.delete-joke-button:active,
+.joke-rating-button:active {
+  transform: translateY(3px);
+}
+.get-joke-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 30px;
+  margin-top: 150px;
+  position: relative;
+}
+
+.get-joke-button {
+  height: 150px;
+  width: 250px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 3px 3px 5px;
+  background-color: seagreen;
+  font-size: 35px;
+  font-family: cursive;
+  margin-top: 130px;
+  cursor: pointer;
+}
+
+.display-joke-container {
+  width: 650px;
+  min-height: 200px;
+  background-color: skyblue;
+  margin-top: 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.display-joke-container p {
+  margin: 20px 15px 15px 15px;
+  padding: 0;
+  font-family: cursive;
+  font-size: 18px;
+}
+.display-joke-container-buttons-wrapper {
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto 10px auto;
+}
+.display-joke-content-wrapper {
+  border: rgb(129, 38, 247) solid;
+  height: 140px;
+  margin: 15px;
+  background-color: whitesmoke;
+}
+.rate-joke-wrapper {
+  color: white;
+  height: 115px;
+  width: 335px;
+  background-color: #2f2f2f;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -135px;
+  display: none;
+}
+.rate-joke-wrapper h3 {
+  padding: 5px;
+  font-size: 20px;
+  font-family: cursive;
+  text-align: center;
+}
+.rate-joke-buttons-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 10px;
+}
+.joke-rating-button {
+  border: none;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+.joke-rating-button:hover {
+  background-color: wheat;
+}
+.rate-joke-wrapper::before {
+  content: " ";
+  width: 0px;
+  background: transparent;
+  height: 0px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #333;
+}
+.save-joke-button,
+.skip-joke-button {
+  height: 40px;
+  width: 90px;
+  border-radius: 10px;
+  border: none;
+  font-family: cursive;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px;
+  cursor: pointer;
+}
+.delete-joke-button {
+  height: 35px;
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  font-family: cursive;
+  font-size: 16px;
+  box-shadow: 3px 3px 5px;
+  cursor: pointer;
+  position: relative;
+  right: -10px;
+}
+.save-joke-button {
+  background-color: cornflowerblue;
+}
+.skip-joke-button,
+.delete-joke-button {
+  background-color: crimson;
+}
+.saved-jokes-section {
+  margin: 150px auto 0;
+  padding-top: 5px;
+  max-width: 800px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.saved-joke {
+  display: flex;
+  justify-content: space-between;
+  border: solid 2px burlywood;
+  padding: 5px;
+  margin: 10px;
+  background-color: bisque;
+  font-family: cursive;
+}
+.saved-joke p {
+  max-width: 580px;
+  margin-top: 10px;
+  margin-left: 6px;
+}
+.saved-joke-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.saved-joke-rating-wrapper {
+  display: flex;
+  margin: 10px;
+}
+.saved-joke-rating-wrapper p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 920px) {
+  .nav-paragraph-div p {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 805px) {
+  nav {
+    height: 100px;
+  }
+  .nav-login-div {
+    margin: 10px 10px;
+  }
+  .nav-login-div .username-label {
+    display: block;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 455px) {
+  .nav-paragraph-div p {
+    font-size: 24px;
+  }
+}

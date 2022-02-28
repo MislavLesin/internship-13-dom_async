@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokes</title>
+    <link rel="stylesheet" href="./styles/jokesStyle.css" />
+    <link rel="stylesheet" href="../styles/modalStyle.css" />
+  </head>
+  <body onload="loadJokesFromLocalStorage()">
+    <img
+      src="./assets/images/funny-computer-wallpaper-backgrounds-1920x1080.jpg"
+      alt="background"
+      class="background-image"
+    />
+    <nav>
+      <div class="nav-login-div">
+        <button class="log-out-button" id="log-out-button" onclick="logout()">
+          Log-In
+        </button>
+        <label class="username-label" id="username-label">ime moje dugo</label>
+      </div>
+      <div class="nav-paragraph-div">
+        <p>Keep up with the trends</p>
+      </div>
+    </nav>
+
+    <section class="get-joke-section">
+      <button class="get-joke-button" onclick="getJokeFirstTime()">
+        GET JOKE
+      </button>
+      <div class="display-joke-container">
+        <div class="display-joke-content-wrapper">
+          <p class="display-joke-content"></p>
+        </div>
+        <div class="display-joke-container-buttons-wrapper">
+          <button class="save-joke-button" onclick="showRating()">
+            Save Joke
+          </button>
+          <button class="skip-joke-button" onclick="getJoke()">Skip</button>
+        </div>
+      </div>
+      <div class="rate-joke-wrapper">
+        <h3>Rate this joke:</h3>
+        <div class="rate-joke-buttons-wrapper">
+          <button onclick="saveJoke(this)" class="joke-rating-button">1</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">2</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">3</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">4</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">5</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">6</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">7</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">8</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">9</button>
+          <button onclick="saveJoke(this)" class="joke-rating-button">
+            10
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="modal-background"></div>
+    <div class="my-modal">
+      <p>Are You Sure you want to delete this item?</p>
+      <div class="my-modal-buttons-wrapper">
+        <button class="my-modal-delete-button">Delete</button>
+        <button class="my-modal-cancel-button">Cancel</button>
+      </div>
+    </div>
+    <section class="saved-jokes-section"></section>
+    <script src="../scripts/fetch.js"></script>
+    <script src="../scripts/jokes.js"></script>
+    <script>
+      setLoginData();
+    </script>
+  </body>
+</html>
